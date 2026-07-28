@@ -1,0 +1,6 @@
+# Fridge AI Robots.txt
+
+User-agent: *
+Allow: /
+
+Sitemap: https://getfridgeai.com/sitemap.xml
