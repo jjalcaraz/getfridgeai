@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://getfridgeai.com/sitemap.xml
+Sitemap: https://www.getfridgeai.com/sitemap.xml
