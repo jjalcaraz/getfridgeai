@@ -65,10 +65,14 @@ export default function RootPage() {
               <span className="text-green-600 font-semibold">✓</span>
               <span>Secure Processing</span>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-green-600 font-semibold">✓</span>
-              <span>App Store Approved</span>
-            </div>
+            {/*
+              REMOVED 2026-08-02: an "App Store Approved" badge.
+              The app is in review, not approved. App Review does sometimes look
+              at the marketing site, and a false approval claim next to a
+              download link that doesn't resolve yet is a bad look at exactly
+              the wrong moment.
+              Restore this only once the app is genuinely live on the App Store.
+            */}
           </div>
         </div>
       </section>
@@ -418,7 +422,7 @@ export default function RootPage() {
               <h3 className="font-semibold mb-4">Legal</h3>
               <ul className="space-y-2 text-gray-400">
                 <li><a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="/support" className="hover:text-white transition-colors">Terms of Service</a></li>
+                <li><a href="/terms" className="hover:text-white transition-colors">Terms of Service</a></li>
               </ul>
             </div>
             <div>
