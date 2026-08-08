@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/support' },
   title: 'Support - Fridge AI',
   description: 'Get help with Fridge AI. Contact our support team, find answers to common questions, and get assistance with technical issues.',
   keywords: 'support, help, customer service, technical support, contact, FAQ',

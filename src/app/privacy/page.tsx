@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/privacy' },
   title: 'Privacy Policy - Fridge AI',
   description: 'Learn how Fridge AI protects your privacy and handles your data securely. Privacy-first approach with no ads or data selling.',
   keywords: 'privacy policy, data protection, security, GDPR, data handling, cookie policy',

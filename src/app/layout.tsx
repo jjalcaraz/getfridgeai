@@ -14,6 +14,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  // The site is served from the www host; the apex and both http hosts 301 here.
+  // metadataBase makes every relative `alternates.canonical` below resolve to
+  // www, so Google sees one self-referencing canonical per page instead of
+  // guessing which host variant is authoritative.
+  metadataBase: new URL("https://www.getfridgeai.com"),
+  alternates: {
+    canonical: "/",
+  },
   title: "Fridge AI - Turn Fridge Photos into Dinner with AI",
   description: "Transform photos of your fridge into personalized recipes, nutrition info, and meal plans in seconds. Save time, reduce food waste, and eat healthier with AI-powered recipe suggestions.",
   keywords: "fridge AI, recipe app, meal planning, cooking app, food scanner, ingredient detection, nutrition tracker, dinner ideas, lunch planner, healthy recipes, keto recipes, vegan recipes, vegetarian recipes, gluten-free recipes, meal prep, food waste reduction, smart cooking, artificial intelligence food",
@@ -21,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Fridge AI - Turn Fridge Photos into Dinner with AI",
     description: "Transform photos of your fridge into personalized recipes, nutrition info, and meal plans in seconds.",
-    url: "https://getfridgeai.com",
+    url: "https://www.getfridgeai.com",
     siteName: "Fridge AI",
     locale: "en_US",
     type: "website",

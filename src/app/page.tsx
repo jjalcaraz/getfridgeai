@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/' },
   title: 'Fridge AI - Turn Fridge Photos into Dinner with AI',
   description: 'Transform photos of your fridge into personalized recipes, nutrition info, and meal plans in seconds. Save time, reduce food waste, and eat healthier with AI-powered recipe suggestions.',
   keywords: 'fridge AI, recipe app, meal planning, cooking app, food scanner, ingredient detection, nutrition tracker, dinner ideas, lunch planner, healthy recipes, keto recipes, vegan recipes, vegetarian recipes, gluten-free recipes, meal prep, food waste reduction, smart cooking, artificial intelligence food',
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Fridge AI - Turn Fridge Photos into Dinner with AI',
     description: 'Transform photos of your fridge into personalized recipes, nutrition info, and meal plans in seconds.',
-    url: 'https://getfridgeai.com',
+    url: 'https://www.getfridgeai.com',
     siteName: 'Fridge AI',
     locale: 'en_US',
     type: 'website',

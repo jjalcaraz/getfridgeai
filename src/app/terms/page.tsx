@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/terms' },
   title: 'Terms of Service - Fridge AI',
   description:
     'Terms of Service for Fridge AI — subscriptions, acceptable use, AI output and food safety disclaimers, and liability.',
