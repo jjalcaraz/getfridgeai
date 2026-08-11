@@ -88,5 +88,7 @@ This includes `bingbot`, `BingPreview`, `OAI-SearchBot`, `PerplexityBot`, and `C
 7. **Keywords meta tag:** present in every page; it has been removed.
 8. **DNS provider:** Vercel serves the site, but Namecheap hosts DNS for
    `getfridgeai.com` (`dns1.registrar-servers.com` and
-   `dns2.registrar-servers.com`). Bing verification therefore uses the
-   `msvalidate.01` metadata tag unless the CNAME is added at Namecheap.
+   `dns2.registrar-servers.com`). Bing verification uses the persistent CNAME
+   `fb61d3fdc059c45660435c6f17f2d74e.getfridgeai.com` pointing to
+   `verify.bing.com`; the temporary `msvalidate.01` metadata tag was removed
+   after authoritative DNS propagation was confirmed.
