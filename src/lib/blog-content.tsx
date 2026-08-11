@@ -1,4 +1,4 @@
-import type { JSX } from 'react'
+import type { JSX, ReactNode } from 'react'
 
 export type BlogPost = {
   slug: string
@@ -16,7 +16,7 @@ export type BlogPost = {
 
 const BASE_URL = 'https://www.getfridgeai.com'
 
-function Cite({ href, children }: { href: string; children: React.ReactNode }) {
+function Cite({ href, children }: { href: string; children: ReactNode }) {
   return (
     <a
       href={href}

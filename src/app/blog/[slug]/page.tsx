@@ -1,16 +1,9 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { JsonLd } from '@/components/json-ld'
-import {
-  blogPosts,
-  postsBySlug,
-  articleJsonLd,
-  howToJsonLd,
-} from '@/lib/blog-content'
+import { generateStaticParams, getPostBySlug } from '@/lib/blog'
 
-export async function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }))
-}
+export { generateStaticParams }
 
 export async function generateMetadata({
   params,
@@ -18,7 +11,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const post = postsBySlug[slug]
+  const post = await getPostBySlug(slug)
   if (!post) return {}
 
   return {
@@ -47,20 +40,8 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const post = postsBySlug[slug]
+  const post = await getPostBySlug(slug)
   if (!post) notFound()
-
-  const jsonLd: Record<string, unknown> = {
-    '@context': 'https://schema.org',
-    '@graph': [articleJsonLd(post)],
-  }
-
-  const howTo = howToJsonLd(post)
-  if (howTo) {
-    jsonLd['@graph'] = [...(jsonLd['@graph'] as unknown[]), howTo]
-  }
-
-  const Content = post.Content
 
   return (
     <main className="min-h-screen bg-white py-20 px-4">
@@ -71,11 +52,9 @@ export default async function BlogPostPage({
         <p className="text-sm text-gray-500 mb-12">
           Published {post.datePublished}
         </p>
-        <div className="space-y-4 text-gray-900">
-          <Content />
-        </div>
+        {post.render()}
       </article>
-      <JsonLd data={jsonLd} />
+      <JsonLd data={post.jsonLd} />
     </main>
   )
 }
