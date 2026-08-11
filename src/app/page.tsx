@@ -5,7 +5,7 @@ import { homePageJsonLd } from '@/lib/structured-data'
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
   title: 'Fridge AI - Turn Fridge Photos into Dinner with AI',
-  description: 'Transform photos of your fridge into personalized recipes, nutrition info, and meal plans in seconds. Save time, reduce food waste, and eat healthier with AI-powered recipe suggestions.',
+  description: 'Turn fridge photos into personalized recipes, nutrition details, and meal plans in seconds. Save time, reduce food waste, and eat healthier with Fridge AI.',
   authors: [{ name: 'Fridge AI' }],
   openGraph: {
     title: 'Fridge AI - Turn Fridge Photos into Dinner with AI',
