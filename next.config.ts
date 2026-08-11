@@ -8,6 +8,14 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
+  async rewrites() {
+    return [
+      {
+        source: "/:key.txt",
+        destination: "/api/indexnow-key?key=:key",
+      },
+    ];
+  },
 };
 
 export default nextConfig;
