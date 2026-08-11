@@ -12,7 +12,7 @@ export default async function AdminBlogPage() {
   return (
     <main>
       <h1>Blog admin</h1>
-      <a href="/admin/blog/new">New post</a>
+      <Link href="/admin/blog/new">New post</Link>
       <ul>
         {posts.map((post) => (
           <li key={post.sha}>

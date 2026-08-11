@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "a163e441-09f1-406c-98d7-524e0a5459ef"
+      }
+    },
+    "android": {
+      "package": "com.jjalcaraz.getfridgeai"
+    }
+  }
+}
