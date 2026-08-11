@@ -4,7 +4,19 @@ export const metadata: Metadata = {
   alternates: { canonical: '/support' },
   title: 'Support - Fridge AI',
   description: 'Get help with Fridge AI. Contact our support team, find answers to common questions, and get assistance with technical issues.',
-  keywords: 'support, help, customer service, technical support, contact, FAQ',
+  openGraph: {
+    title: 'Support - Fridge AI',
+    description: 'Get help with Fridge AI.',
+    url: 'https://www.getfridgeai.com/support',
+    siteName: 'Fridge AI',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Support - Fridge AI',
+    description: 'Get help with Fridge AI.',
+  },
 }
 
 export default function SupportPage() {

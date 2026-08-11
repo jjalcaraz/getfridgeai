@@ -5,7 +5,19 @@ export const metadata: Metadata = {
   title: 'Terms of Service - Fridge AI',
   description:
     'Terms of Service for Fridge AI — subscriptions, acceptable use, AI output and food safety disclaimers, and liability.',
-  keywords: 'terms of service, terms of use, subscription terms, EULA, user agreement',
+  openGraph: {
+    title: 'Terms of Service - Fridge AI',
+    description: 'Terms of Service for Fridge AI.',
+    url: 'https://www.getfridgeai.com/terms',
+    siteName: 'Fridge AI',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Terms of Service - Fridge AI',
+    description: 'Terms of Service for Fridge AI.',
+  },
 }
 
 /**

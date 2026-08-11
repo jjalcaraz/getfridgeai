@@ -4,7 +4,19 @@ export const metadata: Metadata = {
   alternates: { canonical: '/privacy' },
   title: 'Privacy Policy - Fridge AI',
   description: 'Learn how Fridge AI protects your privacy and handles your data securely. Privacy-first approach with no ads or data selling.',
-  keywords: 'privacy policy, data protection, security, GDPR, data handling, cookie policy',
+  openGraph: {
+    title: 'Privacy Policy - Fridge AI',
+    description: 'Learn how Fridge AI protects your privacy and handles your data securely.',
+    url: 'https://www.getfridgeai.com/privacy',
+    siteName: 'Fridge AI',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy - Fridge AI',
+    description: 'Learn how Fridge AI protects your privacy and handles your data securely.',
+  },
 }
 
 export default function PrivacyPage() {

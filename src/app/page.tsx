@@ -1,11 +1,11 @@
 import { Metadata } from 'next'
-import Image from 'next/image'
+import { JsonLd } from '@/components/json-ld'
+import { homePageJsonLd } from '@/lib/structured-data'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
   title: 'Fridge AI - Turn Fridge Photos into Dinner with AI',
   description: 'Transform photos of your fridge into personalized recipes, nutrition info, and meal plans in seconds. Save time, reduce food waste, and eat healthier with AI-powered recipe suggestions.',
-  keywords: 'fridge AI, recipe app, meal planning, cooking app, food scanner, ingredient detection, nutrition tracker, dinner ideas, lunch planner, healthy recipes, keto recipes, vegan recipes, vegetarian recipes, gluten-free recipes, meal prep, food waste reduction, smart cooking, artificial intelligence food',
   authors: [{ name: 'Fridge AI' }],
   openGraph: {
     title: 'Fridge AI - Turn Fridge Photos into Dinner with AI',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Fridge AI - Turn Fridge Photos into Dinner with AI',
     description: 'Transform photos of your fridge into personalized recipes, nutrition info, and meal plans in seconds.',
   },
@@ -24,7 +24,8 @@ export const metadata: Metadata = {
 
 export default function RootPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <>
+      <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-50 to-emerald-50 py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
@@ -446,5 +447,6 @@ export default function RootPage() {
         </div>
       </footer>
     </main>
-  )
+    <JsonLd data={homePageJsonLd} />
+  </>)
 }
