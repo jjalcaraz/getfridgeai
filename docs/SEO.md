@@ -40,10 +40,9 @@ Each leads with the answer, cites sources, and includes limitations.
 
 ## IndexNow setup (human steps)
 
-1. **Generate the key** in Bing Webmaster Tools:
-   - Go to your site in Bing Webmaster Tools.
-   - Open **Settings > IndexNow** and generate a new key.
-   - Copy the 32-character key.
+1. **Generate a key** containing 32–128 hexadecimal characters (Bing does not
+   generate it for you), then keep the same value in Vercel and the hosted key
+   file.
 2. **Add the environment variable** in Vercel:
    - `INDEXNOW_KEY` = the key from Bing.
    - `INDEXNOW_HOST` (optional) = `www.getfridgeai.com`.
@@ -87,3 +86,7 @@ This includes `bingbot`, `BingPreview`, `OAI-SearchBot`, `PerplexityBot`, and `C
 5. **OpenGraph and Twitter images:** the brief correctly noted they were missing; they have now been added.
 6. **JSON-LD:** none existed in the source; it has been added.
 7. **Keywords meta tag:** present in every page; it has been removed.
+8. **DNS provider:** Vercel serves the site, but Namecheap hosts DNS for
+   `getfridgeai.com` (`dns1.registrar-servers.com` and
+   `dns2.registrar-servers.com`). Bing verification therefore uses the
+   `msvalidate.01` metadata tag unless the CNAME is added at Namecheap.

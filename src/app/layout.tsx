@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   // www, so Google sees one self-referencing canonical per page instead of
   // guessing which host variant is authoritative.
   metadataBase: new URL("https://www.getfridgeai.com"),
+  verification: {
+    other: {
+      "msvalidate.01": "FB61D3FDC059C45660435C6F17F2D74E",
+    },
+  },
   robots: {
     index: true,
     follow: true,

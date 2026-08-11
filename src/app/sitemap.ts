@@ -17,23 +17,22 @@ const BASE_URL = 'https://www.getfridgeai.com'
 
 const routes: Array<{
   path: string
+  lastModified: string
   changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']
   priority: number
 }> = [
-  { path: '/', changeFrequency: 'weekly', priority: 1.0 },
-  { path: '/support', changeFrequency: 'monthly', priority: 0.5 },
-  { path: '/privacy', changeFrequency: 'monthly', priority: 0.3 },
-  { path: '/terms', changeFrequency: 'monthly', priority: 0.3 },
-  { path: '/blog/what-to-cook-with-what-you-have', changeFrequency: 'monthly', priority: 0.7 },
-  { path: '/blog/how-much-food-the-average-household-wastes', changeFrequency: 'monthly', priority: 0.7 },
-  { path: '/blog/how-ai-ingredient-recognition-from-a-photo-works', changeFrequency: 'monthly', priority: 0.7 },
-  { path: '/blog/fridge-ai-vs-manual-meal-planning', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/', lastModified: '2026-08-11', changeFrequency: 'weekly', priority: 1.0 },
+  { path: '/support', lastModified: '2026-08-11', changeFrequency: 'monthly', priority: 0.5 },
+  { path: '/privacy', lastModified: '2026-08-11', changeFrequency: 'monthly', priority: 0.3 },
+  { path: '/terms', lastModified: '2026-08-11', changeFrequency: 'monthly', priority: 0.3 },
+  { path: '/blog/what-to-cook-with-what-you-have', lastModified: '2026-08-11', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/blog/how-much-food-the-average-household-wastes', lastModified: '2026-08-11', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/blog/how-ai-ingredient-recognition-from-a-photo-works', lastModified: '2026-08-11', changeFrequency: 'monthly', priority: 0.7 },
+  { path: '/blog/fridge-ai-vs-manual-meal-planning', lastModified: '2026-08-11', changeFrequency: 'monthly', priority: 0.7 },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date()
-
-  return routes.map(({ path, changeFrequency, priority }) => ({
+  return routes.map(({ path, lastModified, changeFrequency, priority }) => ({
     url: `${BASE_URL}${path}`,
     lastModified,
     changeFrequency,
