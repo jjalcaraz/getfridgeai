@@ -53,19 +53,24 @@ export async function GET(request: NextRequest) {
   const token = "${token}";
   const payload = JSON.stringify({ token: token, provider: "github" });
   const message = "authorization:github:success:" + payload;
+  let sent = false;
   function send(origin) {
+    if (sent) return;
+    sent = true;
     if (window.opener) {
       window.opener.postMessage(message, origin);
       window.close();
     }
   }
-  send("*");
   window.addEventListener("message", function(e) {
-    if (e.data === "authorizing:github" && window.opener) {
-      window.opener.postMessage(message, e.origin);
-      window.close();
+    if (e.data === "authorizing:github") {
+      send(e.origin);
     }
   }, false);
+  if (window.opener) {
+    window.opener.postMessage("authorizing:github", "*");
+  }
+  setTimeout(function() { send("*"); }, 500);
 })();
 </script>
 </body>
