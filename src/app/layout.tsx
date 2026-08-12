@@ -4,6 +4,8 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import { Geist, Geist_Mono } from "next/font/google";
 import { JsonLd } from "@/components/json-ld";
 import { globalJsonLd } from "@/lib/structured-data";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -48,7 +50,9 @@ export default function RootLayout({
       <GoogleTagManager gtmId="GTM-WLJ4SXP6" />
       <body className="min-h-full flex flex-col">
         <JsonLd data={globalJsonLd} />
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
