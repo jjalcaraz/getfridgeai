@@ -416,6 +416,7 @@ export default function RootPage() {
               <h3 className="font-semibold mb-4">Fridge AI</h3>
               <ul className="space-y-2 text-gray-400">
                 <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
+                <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
                 <li><a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a></li>
                 <li><a href="/support" className="hover:text-white transition-colors">Support</a></li>
               </ul>

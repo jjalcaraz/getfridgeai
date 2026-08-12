@@ -62,7 +62,7 @@ async function loadMarkdownPosts(): Promise<BlogPost[]> {
     const { frontmatter, content } = parseFrontmatter(raw)
     const slug = filename.replace(/\.md$/, '')
     const title = frontmatter.title || slug
-    const description = frontmatter.description || ''
+    const description = frontmatter.description || frontmatter.summary || ''
     const datePublished = frontmatter.datePublished || frontmatter.date || ''
     const dateModified = frontmatter.dateModified || datePublished
     const html = markdownToHtml(content)
@@ -127,17 +127,33 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
 }
 
 export async function getAllPosts(): Promise<
-  { slug: string; lastModified: string }[]
+  { slug: string; title: string; description: string; date: string; lastModified: string }[]
 > {
   const md = await loadMarkdownPosts()
-  const all: { slug: string; lastModified: string }[] = []
+  const all: { slug: string; title: string; description: string; date: string; lastModified: string }[] = []
   for (const post of md) {
-    all.push({ slug: post.slug, lastModified: post.dateModified })
+    all.push({
+      slug: post.slug,
+      title: post.title,
+      description: post.description,
+      date: post.datePublished,
+      lastModified: post.dateModified,
+    })
   }
   for (const post of legacyPosts) {
-    all.push({ slug: post.slug, lastModified: post.dateModified })
+    all.push({
+      slug: post.slug,
+      title: post.title,
+      description: post.description,
+      date: post.datePublished,
+      lastModified: post.dateModified,
+    })
   }
-  return all
+  return all.sort((a, b) => {
+    const da = a.date ? new Date(a.date).getTime() : 0
+    const db = b.date ? new Date(b.date).getTime() : 0
+    return db - da
+  })
 }
 
 export async function generateStaticParams() {

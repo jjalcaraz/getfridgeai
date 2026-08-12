@@ -10,6 +10,7 @@ const routes: Array<{
   priority: number
 }> = [
   { path: '/', lastModified: '2026-08-11', changeFrequency: 'weekly', priority: 1.0 },
+  { path: '/blog', lastModified: '2026-08-11', changeFrequency: 'weekly', priority: 0.7 },
   { path: '/support', lastModified: '2026-08-11', changeFrequency: 'monthly', priority: 0.5 },
   { path: '/privacy', lastModified: '2026-08-11', changeFrequency: 'monthly', priority: 0.3 },
   { path: '/terms', lastModified: '2026-08-11', changeFrequency: 'monthly', priority: 0.3 },
