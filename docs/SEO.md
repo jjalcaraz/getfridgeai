@@ -80,7 +80,7 @@ This includes `bingbot`, `BingPreview`, `OAI-SearchBot`, `PerplexityBot`, and `C
 ## Corrections to the original brief
 
 1. **Sitemap:** there is no static `public/sitemap.xml`; the sitemap is generated from `src/app/sitemap.ts`.
-2. **App Store URL:** `https://apps.apple.com/app/fridge-ai-recipe-scanner` returns HTTP 404, and the source code comment says the app is still in review. `installUrl`/`downloadUrl` were left out of the `SoftwareApplication` schema to avoid linking to a dead URL.
+2. **App Store URL:** `https://apps.apple.com/us/app/fridge-ai-food-recipes/id6739216407` is the live App Store listing. `installUrl` is included in the `SoftwareApplication` schema.
 3. **App Store ratings:** no real rating data exists, so `aggregateRating` was not added.
 4. **Logo:** no logo asset exists, so the `logo` property was omitted from the `Organization` schema.
 5. **OpenGraph and Twitter images:** the brief correctly noted they were missing; they have now been added.

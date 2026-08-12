@@ -37,7 +37,7 @@ export default function RootPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="https://apps.apple.com/app/fridge-ai-recipe-scanner"
+              href="https://apps.apple.com/us/app/fridge-ai-food-recipes/id6739216407"
               className="bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
@@ -245,7 +245,7 @@ export default function RootPage() {
                 </li>
               </ul>
               <a
-                href="https://apps.apple.com/app/fridge-ai-recipe-scanner"
+                href="https://apps.apple.com/us/app/fridge-ai-food-recipes/id6739216407"
                 className="block w-full bg-black text-white text-center py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -282,7 +282,7 @@ export default function RootPage() {
                 </li>
               </ul>
               <a
-                href="https://apps.apple.com/app/fridge-ai-recipe-scanner"
+                href="https://apps.apple.com/us/app/fridge-ai-food-recipes/id6739216407"
                 className="block w-full bg-green-600 text-white text-center py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -398,7 +398,7 @@ export default function RootPage() {
             Download Fridge AI today and stop planning, start cooking.
           </p>
           <a
-            href="https://apps.apple.com/app/fridge-ai-recipe-scanner"
+            href="https://apps.apple.com/us/app/fridge-ai-food-recipes/id6739216407"
             className="inline-block bg-white text-green-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
@@ -430,7 +430,7 @@ export default function RootPage() {
             <div>
               <h3 className="font-semibold mb-4">Download</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="https://apps.apple.com/app/fridge-ai-recipe-scanner" className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">iOS App Store</a></li>
+                <li><a href="https://apps.apple.com/us/app/fridge-ai-food-recipes/id6739216407" className="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">iOS App Store</a></li>
                 <li><span className="text-gray-500">Google Play (Coming Soon)</span></li>
               </ul>
             </div>

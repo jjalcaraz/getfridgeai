@@ -24,6 +24,7 @@ const softwareApplication = {
   name: 'Fridge AI',
   operatingSystem: 'iOS',
   applicationCategory: 'LifestyleApplication',
+  installUrl: 'https://apps.apple.com/us/app/fridge-ai-food-recipes/id6739216407',
   description:
     'Transform photos of your fridge into personalized recipes, nutrition info, and meal plans in seconds. Save time, reduce food waste, and eat healthier with AI-powered recipe suggestions.',
   offers: [
