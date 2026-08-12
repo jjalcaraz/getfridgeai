@@ -140,7 +140,7 @@ npm run build
 
 ## 🔗 External Links
 
-- iOS App Store: https://apps.apple.com/app/fridge-ai-recipe-scanner
+- iOS App Store: https://apps.apple.com/us/app/fridge-ai-food-recipes/id6739216407
 - Support Email: support@getfridgeai.com
 - Privacy Policy: /privacy
 - Support: /support

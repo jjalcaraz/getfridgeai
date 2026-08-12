@@ -215,7 +215,7 @@ NEXT_PUBLIC_GA_ID=your_ga_id
 ## 🔗 External Links Configuration
 
 **iOS App Store:**
-- URL: `https://apps.apple.com/app/fridge-ai-recipe-scanner`
+- URL: `https://apps.apple.com/us/app/fridge-ai-food-recipes/id6739216407`
 - Status: ✅ Live and working
 
 **Google Play Store:**
